@@ -1,0 +1,28 @@
+while True:
+    # Lista para armazenar os itens da compra
+    itens_compra = []
+
+    # Loop para adicionar itens à lista de compras
+    while True:
+        # Solicita ao usuário o nome do item
+        item_nome = input("Digite o nome do item (ou 'fim' para encerrar): ")
+
+        # Verifica se o usuário deseja encerrar a lista de compras
+        if item_nome.lower() == 'fim':
+            break
+
+        # Adiciona o item à lista de compras
+        itens_compra.append(item_nome)
+
+    # Organiza os itens em ordem alfabética
+    itens_compra_ordenados = sorted(itens_compra)
+
+    # Exibe os itens organizados
+    print("\nItens da compra em ordem alfabética:")
+    for item in itens_compra_ordenados:
+        print(item)
+
+    # Pergunta ao usuário se deseja fazer outra organização
+    continuar = input("Deseja organizar outra lista? (Digite 's' para sim ou 'n' para não): ")
+    if continuar.lower() != 's':
+        break  # Encerra o programa se o usuário não quiser continuar
